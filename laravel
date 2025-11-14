@@ -1,0 +1,100 @@
+ Laravel v11.46.0 (PHP v8.3.6) 
+
+To Create Laravel project in CMD
+	composer create-project laravel/laravel project_dir_name
+	composer create-project laravel/laravel:^11.0 your-project-name
+	
+To run Laravel Project
+	php artisan serve
+	
+To Install Bootstrap in Laravel 
+	composer require laravel/ui   // install laravel ui package that allow to install bootstrap with auth
+	php artisan ui bootstrap      // Generate Bootstrap Scaffolding.
+	npm install bootstrap-icons --save-dev    // Install Bootstrap Icon
+	
+	resources\sass\app.scss - do the following
+	
+	/* Fonts */
+	@import url('https://fonts.bunny.net/css?family=Nunito');
+
+	/* Variables */
+	@import 'variables';
+
+	/* Bootstrap */
+	@import 'bootstrap/scss/bootstrap';
+	@import 'bootstrap-icons/font/bootstrap-icons.css';
+	
+	Build CSS & JS File
+	npm install
+	npm run build
+
+To migrate tables to DB
+	php artisan migrate
+	
+	TOPFORM BUSINESS SYSTEMS PVT LTD
+	199203499K
+
+
+To create migrate and table in database
+php artisan make:migration create_post_table --create=posts
+
+php artisan tinker
+> Model:create([]);
+
+php artisan make:seeder PostSeeder
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+to run seeder
+php artisan db:seed --class=PostSeeder
+
+add the below line to DatabaseSeeder
+$this->call(PostSeeder::class);
+
+and run this
+php artisan db:seed
+Or
+php artisan db:seed --class=CategorySeeder
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+use tinker to select all the rows from table
+php artisan tinker
+\App\Models\Post::all()
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+to create model as well as migrate in same command
+php artisan make:model Category -m
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+add foriegn key
+php artisan make:migration add_category_id_to_posts_table --table=posts
+
+to reverse last created migration
+php artisan migrate:rollback --step=1
+
+to reverse last 2 created migrations
+php artisan migrate:rollback --step=2
+
+check categories for selected post
+======
+php artisan tinker
+$post = \App\Models\Post::find(57)
+$post->category
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+to get pagination realation styles and updates
+php artisan vendor:publish --tag=laravel-pagination
+
+Edit pagination style and content on resources/views/vendor/bootstrap-5.blade.php
+
+
+Laravel Breeze for Authentication
+==========
+
+composer require laravel/breeze --dev
+
+php artisan breeze:install 
+
+npm install

@@ -1,0 +1,50 @@
+WORDPRESS
+
+https://www.youtube.com/watch?v=cDcpbNE4xys
+
+
+*******************************************************
+
+GITHUB
+
+https://www.youtube.com/watch?v=VIBWdLLq9kQ
+
+git config --global user.name "jegadeshsundaram"
+git config --global user.email "jegaonline@gmail.com"
+
+Get files/diretories from GIT to our Local System
+Initializes a new Git repository in the current directory.
+git clone <repository_url>
+
+Any modification / add new file in the local -> ADD -> COMMIT -> PUSH
+Any modification in the GIT REPO -> PULL
+
+FROM LOCAL SYSTEM to GIT REPO
+=============================
+GIT ADD FILE/FOLDER NAME/*
+GIT COMMIT -M "MESSAGE" 
+GIT PUSH ORIGIN MAIN/BRANCH
+
+FROM GIT REPO TO LOCAL SYSTEM
+=============================
+GIT PULL
+
+Change branch name
+git branch -M New_Branch_name
+
+list all git branches
+git branch -a
+
+move to any branch
+git checkout branch_name
+
+*******************************************************
+THINGS TO STUDY
+WORDPRESS
+GIT
+EXCEL & FORMULAS
+DATA ENTRY
+LARAVEL
+PYTHON SCRAPE
+*******************************************************
+
